@@ -1,0 +1,20 @@
+name: MyRocketLauncher
+version: '${project.version}'
+main: github.masterrecording.myrocketlauncher.MyRocketLauncher
+api-version: '1.20'
+commands:
+  set_launcher:
+    description: Set the launcher used to launch the rocket
+    usage: /set_launcher
+    permission: mrl.command.set_launcher
+  rocket:
+    description: Command hub to rocket launcher
+    usage: /rocket
+  reload:
+    description: Reload the configuration
+    usage: /reload
+    permission: mrl.command.reload
+  give_rocket:
+    description: Give a rocket
+    usage: /give_rocket
+    permission: mrl.command.give_rocket

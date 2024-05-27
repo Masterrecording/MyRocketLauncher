@@ -1,0 +1,54 @@
+# Author: ImMataviejaz_
+# Date: 2024/05/25
+# Description: Configuration file for the plugin
+
+# Do not touch this
+version: 1.0
+
+messages:
+  plugin_enabled: '&aMyRocketLauncher has been enabled!'
+  plugin_disabled: '&cMyRocketLauncher has been disabled!'
+  rocket_launched: '&b&lRocket launched!'
+  no_permission: '&cYou don''t have permission to use this command!'
+  not_player: '&cYou must be a player to use this command!'
+  not_launcher_set: '&cYou must set a launcher first!'
+  launcher_set: '&aLauncher set!'
+  config_reloaded: '&aConfiguration reloaded!'
+  rocket_gived: '&b&lGiven rocket launcher!'
+
+rocket:
+  # Permission to use rocket launcher (Leave false means anyone can use it)
+  permission_required: false
+
+  # Explosion power (Values up to 100 may crash the server)
+  explosion_power: 4
+
+  # Spawn fire
+  spawn_fire: true
+
+  # The launcher used DO NOT EDIT HERE, use /set_launcher instead
+  # To get the default launcher, use /give @p crossbow[minecraft:item_name='"Rocket Launcher"', minecraft:enchantment_glint_override=true]
+  launcher:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3839
+    type: CROSSBOW
+    meta:
+      ==: ItemMeta
+      meta-type: CROSSBOW
+      item-name: '"Rocket Launcher"'
+      enchantment-glint-override: true
+
+
+permissions:
+  # The permission to use the rocket launcher (permission_required = true)
+  use_launcher_permission: mrl.use_rocket_launcher
+
+  # Permission to use the command /set_launcher
+  set_launcher_permission: mrl.command.set_launcher
+
+  # Permission to use the command /give_rocket
+  give_rocket_permission: mrl.command.give_rocket
+
+  # Permission to use the command /reload
+  reload_permission: mrl.command.reload
+
